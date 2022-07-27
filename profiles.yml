@@ -1,0 +1,28 @@
+jaffle_shop:
+  outputs:
+    dev:
+      dbname: dbttest
+      host: localhost
+      pass: '747202'
+      port: 5432
+      schema: public
+      threads: 4
+      type: postgres
+      user: postgres
+    prod:
+      dbname:
+      - dbname
+      host:
+      - host
+      pass:
+      - prod_password
+      port:
+      - port
+      schema:
+      - prod_schema
+      threads:
+      - 1 or more
+      type: postgres
+      user:
+      - prod_username
+  target: dev
